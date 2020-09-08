@@ -13,6 +13,8 @@
 		DE6FD3B52507410A007F9387 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6FD3B32507410A007F9387 /* Main.storyboard */; };
 		DE6FD3B72507410D007F9387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE6FD3B62507410D007F9387 /* Assets.xcassets */; };
 		DE6FD3BA2507410D007F9387 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE6FD3B82507410D007F9387 /* LaunchScreen.storyboard */; };
+		DE6FD3C3250744B2007F9387 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6FD3C2250744B2007F9387 /* Constants.swift */; };
+		DE6FD3C625074955007F9387 /* CurrencyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6FD3C525074955007F9387 /* CurrencyDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DE6FD3B62507410D007F9387 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE6FD3B92507410D007F9387 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE6FD3BB2507410D007F9387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE6FD3C2250744B2007F9387 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DE6FD3C525074955007F9387 /* CurrencyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 		DE6FD3AC2507410A007F9387 /* Currency Converter */ = {
 			isa = PBXGroup;
 			children = (
+				DE6FD3C425074943007F9387 /* Model */,
+				DE6FD3C1250744A3007F9387 /* Constants */,
 				DE6FD3AD2507410A007F9387 /* AppDelegate.swift */,
 				DE6FD3AF2507410A007F9387 /* SceneDelegate.swift */,
 				DE6FD3B12507410A007F9387 /* ViewController.swift */,
@@ -65,6 +71,22 @@
 				DE6FD3BB2507410D007F9387 /* Info.plist */,
 			);
 			path = "Currency Converter";
+			sourceTree = "<group>";
+		};
+		DE6FD3C1250744A3007F9387 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DE6FD3C2250744B2007F9387 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		DE6FD3C425074943007F9387 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE6FD3C525074955007F9387 /* CurrencyDataModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +163,8 @@
 				DE6FD3B22507410A007F9387 /* ViewController.swift in Sources */,
 				DE6FD3AE2507410A007F9387 /* AppDelegate.swift in Sources */,
 				DE6FD3B02507410A007F9387 /* SceneDelegate.swift in Sources */,
+				DE6FD3C3250744B2007F9387 /* Constants.swift in Sources */,
+				DE6FD3C625074955007F9387 /* CurrencyDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
