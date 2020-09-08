@@ -61,11 +61,11 @@
 			isa = PBXGroup;
 			children = (
 				DE6FD3C425074943007F9387 /* Model */,
+				DE6FD3C725074E32007F9387 /* View */,
+				DE6FD3C825074E9D007F9387 /* Controller */,
 				DE6FD3C1250744A3007F9387 /* Constants */,
 				DE6FD3AD2507410A007F9387 /* AppDelegate.swift */,
 				DE6FD3AF2507410A007F9387 /* SceneDelegate.swift */,
-				DE6FD3B12507410A007F9387 /* ViewController.swift */,
-				DE6FD3B32507410A007F9387 /* Main.storyboard */,
 				DE6FD3B62507410D007F9387 /* Assets.xcassets */,
 				DE6FD3B82507410D007F9387 /* LaunchScreen.storyboard */,
 				DE6FD3BB2507410D007F9387 /* Info.plist */,
@@ -87,6 +87,22 @@
 				DE6FD3C525074955007F9387 /* CurrencyDataModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DE6FD3C725074E32007F9387 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE6FD3B32507410A007F9387 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DE6FD3C825074E9D007F9387 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DE6FD3B12507410A007F9387 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

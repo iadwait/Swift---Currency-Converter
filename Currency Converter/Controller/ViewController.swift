@@ -8,17 +8,42 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
     
     let url = URL(string: "http://data.fixer.io/api/latest?access_key=\(K.apiKey)") //Put Your API Key where i have written K.apiKey,You will get it from http://data.fixer.io
     var myCurrency:[String] = []
     var myValues:[Double] = []
-
+    var selectedCurrencyValue:Double = 0
+    
+    @IBOutlet weak var txtUserInput: UITextField!
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var lblOutput: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         getNetworkData(from: url!)
+        pickerView.delegate = self
+        pickerView.dataSource = self
     }
-
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return myCurrency.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return myCurrency[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedCurrencyValue = myValues[row]
+    }
+    
+    
     func getNetworkData(from url:URL)
     {
         let session = URLSession(configuration: .default)
@@ -41,11 +66,19 @@ class ViewController: UIViewController {
                         print("Error Decoding Data")
                     }
                 }
+                DispatchQueue.main.async {
+                    self.pickerView.reloadAllComponents()
+                }
                 
             }
         }
         task.resume()
     }
-
+    
+    @IBAction func btnConvertTapped(_ sender: UIButton) {
+        
+    }
+    
+    
 }
 
