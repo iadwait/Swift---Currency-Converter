@@ -14,6 +14,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     var myCurrency:[String] = []
     var myValues:[Double] = []
     var selectedCurrencyValue:Double = 0
+    var selectedCurrencyName:String = ""
     
     @IBOutlet weak var txtUserInput: UITextField!
     @IBOutlet weak var pickerView: UIPickerView!
@@ -41,6 +42,7 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         selectedCurrencyValue = myValues[row]
+        selectedCurrencyName = myCurrency[row]
     }
     
     
@@ -76,7 +78,9 @@ class ViewController: UIViewController,UIPickerViewDelegate,UIPickerViewDataSour
     }
     
     @IBAction func btnConvertTapped(_ sender: UIButton) {
-        
+        if txtUserInput.text != ""{
+            lblOutput.text = "\(selectedCurrencyName) = " + String(Double(txtUserInput.text!)! * selectedCurrencyValue)
+        }
     }
     
     
